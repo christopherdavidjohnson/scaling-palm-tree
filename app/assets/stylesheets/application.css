@@ -1,0 +1,117 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+ /* body {
+   background-color: red;
+ } */
+
+ .topside {
+   position: sticky;
+   left: 8vw;
+   background-color: white;
+   width: 150vw;
+   max-height: 50vh;
+
+ }
+
+ div {
+   display: inline-block;
+ }
+
+body {
+  display:inline-block;
+  height: 3000px;
+  margin: 0px;
+}
+
+
+.banner {
+  display: flex;
+}
+
+ .logo {
+   display: flex;
+   position: relative;
+   width: 25vw;
+   height: 5vw;
+   margin-left: 20vw;
+   margin-right: 14vw;
+   margin-top: 1.5vw;
+ }
+
+.searchicon {
+  display: flex;
+  justify-content: flex-start;
+  width: 2vw;
+  height: 2vw;
+  margin-left: 2vw;
+  padding-top: 3.5vw;
+}
+
+.login {
+ display: flex;
+ justify-content: flex-end;
+ margin: 2vw;
+ margin-top: 3vw;
+ font-size: 2vw;
+}
+.signin {
+  display: flex;
+}
+.signup {
+  display: flex;
+  margin-right: 1vw;
+}
+
+.bag {
+  width: 2vw;
+  margin-left: 2vh;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover{
+  color: red;
+  text-decoration: underline;
+}
+
+nav {
+  position: flex;
+  position: sticky;
+  display: inline-block;
+  justify-content: center;
+  font-size: 2vw;
+  margin-top: 3vw;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  z-index: 1;
+  width: 150vw;
+}
+
+.navitem {
+  padding: 0.5vw;
+}
+
+
+
+.women {
+  display: inline-block;
+  width: fit-content;
+  margin-left: 10vw;
+}
