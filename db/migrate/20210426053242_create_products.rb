@@ -2,31 +2,32 @@ class CreateProducts < ActiveRecord::Migration[5.2]
   def change
     create_table :products do |t|
       t.text :name
-      t.text :SKU
-      t.text :IDSKU
-      t.text :VendorProductID
-      t.text :ProductName
-      t.text :ProductDescription
-      t.text :SupplierID
-      t.text :CategoryID
-      t.text :QuantityPerUnit
-      t.text :UnitPrice
-      t.text :MSRP
-      t.text :AvailableSize
-      t.text :AvailableColors
-      t.text :Size
-      t.text :Color
-      t.text :Discount
-      t.text :UnitWeight
-      t.text :UnitsInStock
-      t.text :UnitsOnOrder
-      t.text :ReorderLevel
-      t.text :ProductAvailable
-      t.text :DiscountAvailable
-      t.text :CurrentOrder
-      t.text :Picture
-      t.text :Ranking
-      t.text :Description
+      t.text :sku
+      t.text :idsku
+      t.integer :vendorproduct_id
+      t.text :productName
+      t.text :productDescription
+      t.integer :supplier_id
+      t.integer :category_id
+      t.integer :subcategory_id
+      t.integer :quantityPerUnit
+      t.money :unitPrice
+      t.integer :msrp
+      t.text :availableSize
+      t.text :availableColors
+      t.text :size
+      t.text :color
+      t.text :discount
+      t.text :unitWeight
+      t.integer :unitsInStock
+      t.integer :unitsOnOrder
+      t.text :reorderLevel
+      t.boolean :productAvailable
+      t.boolean :discountAvailable
+      t.text :currentOrder
+      t.text :picture
+      t.integer :ranking
+      t.text :description
 
 
       t.timestamps

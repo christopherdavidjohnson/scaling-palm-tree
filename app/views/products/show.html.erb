@@ -1,0 +1,25 @@
+
+<img class="productfeatureimage" src="<%= @product.picture %>" alt="img here">
+
+<div class="productdescriptionstuff">
+
+
+<h1 class='showpage'><%= @product.name %></h1>
+<p class='showpage'><%= @product.productDescription %></p>
+<p class='showpage'>$<%= @product.unitPrice %></p>
+
+
+
+
+  <%= form_tag add_cart_path(@product.id) do %>
+  Size
+  <%= text_field_tag(:size) %>
+  Quantity
+  <%= text_field_tag(:quantity) %>
+  Color
+  <%= text_field_tag(:color) %>
+
+  <%= submit_tag "Add to cart" %>
+  <% end %>
+
+  </div>

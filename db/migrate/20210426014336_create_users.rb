@@ -2,29 +2,29 @@ class CreateUsers < ActiveRecord::Migration[5.2]
   def change
     create_table :users do |t|
       t.text :email
-      t.text :FirstName
-      t.text :LastName
-      t.text :Room
-      t.text :Building
-      t.text :Address1
-      t.text :Address2
-      t.text :City
-      t.text :State
-      t.text :PostalCode
-      t.text :Country
-      t.text :Phone
-      t.text :Mobile
-      t.text :BillingAddress
-      t.text :BillingCity
-      t.text :BillingRegion
-      t.text :BillingPostalCode
-      t.text :BillingCountry
-      t.text :ShipAddress
-      t.text :ShipCity
-      t.text :ShipRegion
-      t.text :ShipPostalCode
-      t.text :ShipCountry
-      t.text :DateEntered
+      t.text :firstName
+      t.text :lastName
+      t.text :room
+      t.text :building
+      t.text :address1
+      t.text :address2
+      t.text :city
+      t.text :state
+      t.text :postalCode
+      t.text :country
+      t.integer :phone
+      t.integer :mobile
+      t.text :billingAddress
+      t.text :billingCity
+      t.text :billingRegion
+      t.text :billingPostalCode
+      t.text :billingCountry
+      t.text :shipAddress
+      t.text :shipCity
+      t.text :shipRegion
+      t.text :shipPostalCode
+      t.text :shipCountry
+      t.text :dateEntered
 
       t.timestamps
     end

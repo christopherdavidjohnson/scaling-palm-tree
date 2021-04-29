@@ -1,0 +1,24 @@
+// Place all the styles related to the products controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.showpage {
+  font-family: 'Montserrat', sans-serif;
+  z-index: -2;
+}
+
+.productfeatureimage {
+  position: absolute;
+  height: 30vw;
+  margin-top: 2vw;
+  margin-left: 2vw;
+  margin-bottom: 5vw;
+  border-radius: 2vw;
+  overflow:hidden;
+  z-index: -2;
+}
+
+.productdescriptionstuff{
+  position: absolute;
+  padding-left: 30vw;
+  z-index: -2;
+}

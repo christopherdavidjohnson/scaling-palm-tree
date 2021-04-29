@@ -1,28 +1,28 @@
 class CreateSuppliers < ActiveRecord::Migration[5.2]
   def change
     create_table :suppliers do |t|
-      t.text :CompanyName
-      t.text :ContactFName
-      t.text :ContactLName
-      t.text :ContactTitle
-      t.text :Address1
-      t.text :Address2
-      t.text :City
-      t.text :State
-      t.text :PostalCode
-      t.text :Country
-      t.text :Phone
-      t.text :Mobile
-      t.text :Email
-      t.text :URL
-      t.text :PaymentMethods
-      t.text :DiscountType
-      t.text :TypeGoods
-      t.text :Notes
-      t.text :DiscountAvailable
-      t.text :CurrentOrder
-      t.text :Logo
-      t.text :CustomerID
+      t.text :companyName
+      t.text :contactFName
+      t.text :contactLName
+      t.text :contactTitle
+      t.text :address1
+      t.text :address2
+      t.text :city
+      t.text :state
+      t.text :postalCode
+      t.text :country
+      t.integer :phone
+      t.integer :mobile
+      t.text :email
+      t.text :url
+      t.text :paymentMethods
+      t.text :discountType
+      t.text :typeGoods
+      t.text :notes
+      t.text :discountAvailable
+      t.text :currentOrder
+      t.text :logo
+      t.integer :customer_id
 
       t.timestamps
     end

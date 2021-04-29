@@ -1,3 +1,68 @@
 // Place all the styles related to the Pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.productimage {
+ // width: 20vw;
+ height: 20vw;
+ margin-top: 2vw;
+ border-radius: 2vw;
+ overflow:hidden;
+}
+
+.itemgrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 70vw;
+  text-align: center;
+  margin-left: 30vw;
+  padding-bottom: 2vw;
+  margin-right: 0vw;
+}
+
+.categoryheader {
+  background-color: #cccccc;
+  margin-top: 0vw;
+  text-align: center;
+  padding-top: 1vw;
+  padding-bottom: 1vw;
+  font-size: 3vw;
+  margin-bottom: 0vw;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.gridcell {
+  font-size: 2vw;
+}
+
+.gridcellhome {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 85vw;
+  text-align: center;
+  padding-bottom: 2vw;
+  margin-left: 10vw;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.homeimagediv{
+  overflow: hidden;
+  width:25vw;
+  height:25vw;
+  border-radius: 2vw;
+  margin-top: 5vw;
+}
+
+.homeimage{
+  justify-content: center;
+  align-items: center;
+  object-fit: cover;
+  width: 25vw;
+  border-radius: 2vw;
+  margin-top: 2vw;
+}
+
+.homepage{
+  font-family: 'Montserrat', sans-serif;
+  padding-left: 10vw;
+}

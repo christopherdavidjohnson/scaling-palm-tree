@@ -8,6 +8,8 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <link rel="stylesheet" href="stylesheets/application.css">
+    <style>@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');</style>
+    <style>@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');</style>
   </head>
 
 
@@ -17,12 +19,12 @@
 
     <img class='searchicon' src="https://cdn2.iconfinder.com/data/icons/ios-7-icons/50/search-512.png" alt="search">
 
-<a href="/"><img class='logo' src="https://betterthat.com/img/logo_dark.png" alt="logo here"></a>
+<a href="/"><img class='logo' src="https://i.imgur.com/IwjoRtH.png" alt="logo here"></a>
 
     <div class='login'>
       <% if @current_user.present? %>
         <%= link_to "Users", users_path if @current_user.admin? %>
-        <p>Logged in as <%= @current_user.email %></p>
+        <p class='loggedinas'>Logged in as <%= @current_user.email %></p><br>
         <%= link_to "Logout #{ @current_user.email }", login_path, :method => 'delete' %>
       <% else %>
       <div class='signup'>
@@ -33,24 +35,36 @@
         <%= link_to "Sign in", login_path %>
       </div>
       <% end %>
-      <img class='bag' src="https://betterthat.com/img/bagicon.jpg" alt="bag">
+      <img class='bag' src="https://i.imgur.com/NNAodWj.jpg" alt="bag">
     </div>
-</div>
-<nav><a href="#"></a>
-  <div class='navitem Women'><a href="/pages/women">Women</a></div>
-  <div class='navitem Men'><a href="/pages/men">Men</a></div>
-  <div class='navitem Kids'><a href="/pages/kids">Kids</a></div>
-  <div class='navitem Home'><a href="/pages/homeware">Homeware</a></div>
-  <div class='navitem Beauty'><a href="/pages/beauty">Beauty</a></div>
-  <div class='navitem Sports'><a href="/pages/sports">Sports</a></div>
-  <div class='navitem Electronics'><a href="/pages/electronics">Electronics</a></div>
-  <div class='navitem Toys'><a href="/pages/toys">Toys</a></div>
-  <div class='navitem Brands'><a href="/pages/brands">Brands</a></div>
-  <div class='navitem Stores'><a href="/pages/stores">Stores</a></div>
-  <div class='navitem GoodCauses'><a href="/pages/good_causes">Good Causes</a></div>
+</div><div class="navdiv">
+<nav>
+  <div class='navitem Women'>Women</div>
+  <div class='navitem Men'>Men</div>
+  <div class='navitem Kids'>Kids</div>
+  <div class='navitem Home'>Homeware</div>
+  <div class='navitem Beauty'>Beauty</div>
+  <div class='navitem Sports'>Sports</div>
+  <div class='navitem Electronics'>Electronics</div>
+  <div class='navitem Toys'>Toys</div>
+  <div class='navitem Brands'>Brands</div>
+  <div class='navitem Stores'>Stores</div>
+  <div class='navitem GoodCauses'>Good Causes</div>
 </nav>
 </div>
+<div class="subcatnav" id='navbar'>
+<% Category.all.each do |category| %>
+<div class='<%= category.categoryName %>'>
+  <% category.sub_categories.each do |sub| %>
+  <%= link_to sub.subName, root_path %>
+  <% end %>
+</div>
+<% end %>
+</div>
+</div>
+<img class='lowerbanner'src="https://i.imgur.com/vrYjiSb.jpg" alt="banner image">
   <body>
+
     <%= yield %>
   </body>
 </html>

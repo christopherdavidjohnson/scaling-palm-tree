@@ -1,0 +1,26 @@
+
+<p class='categoryheader'><%= @category.categoryName %></p>
+<img class='sidebar' src="https://i.imgur.com/n8PQo47.png" alt="">
+<div class="itemgrid">
+
+<% @products.each do |product| %>
+
+  <div class='gridcell'>
+
+<%= link_to product_path(product) do %>
+    <img class="productimage" src="<%= product.picture %>" alt="img here"><br>
+
+    <div class="productname">
+    <%= product.name %>
+
+    </div><% end %><br>
+
+    <div class='gridprice'>
+    $<%= product.unitPrice %>
+    </div><br>
+
+  </div>
+<% end %>
+
+
+</div>
